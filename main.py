@@ -10,7 +10,7 @@ import os
 
 class WOCCli:
     def __init__(self):
-        self.token_save_path = f"{os.getenv('LOCALAPPDATA')}/woc_token"
+        self.token_save_path = "woc_token.txt"
         self.token = self.check_token()
         self.woc: WOC = WOC(self.token) if self.token else None  # type: ignore
         if self.woc is not None:
